@@ -7,9 +7,3 @@ function animateWindow(){
     x.style.visibility = "visible";
     return true;
 }
-
-function animateFunction(){
-    if (animateWindow()){
-        console.log("Print To Console");
-    }
-}
