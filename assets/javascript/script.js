@@ -1,9 +1,14 @@
-/*event listener added to check for window resizing*/
-window.addEventListener('resize', animateWindow);
+var doit;
+function resized(){
+    var x = document.getElementById("resize-text");
+    x.style.visibility = "hidden";
+}
 
-/*function to create visibility on resizing of window*/
-function animateWindow(){
+window.onresize = function() {
     var x = document.getElementById("resize-text");
     x.style.visibility = "visible";
-    return true;
-}
+    clearTimeout(doit);
+    doit = setTimeout(function() {
+        resized();
+    }, 250);
+};
