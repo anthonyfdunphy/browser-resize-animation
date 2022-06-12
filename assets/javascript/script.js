@@ -1,3 +1,5 @@
+/* script created to display div when resizing browser window*/ 
+
 var doit;
 function resized(){
     var x = document.getElementById("resize-text");
