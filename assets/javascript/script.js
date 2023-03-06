@@ -1,16 +1,12 @@
-/* script created to display div when resizing browser window*/ 
+const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    mobile: {
+        smooth: true
+    },
+    tablet: {
+        smooth: true
+    }
+});
 
-var doit;
-function resized(){
-    var x = document.getElementById("resize-text");
-    x.style.visibility = "hidden";
-}
-
-window.onresize = function() {
-    var x = document.getElementById("resize-text");
-    x.style.visibility = "visible";
-    clearTimeout(doit);
-    doit = setTimeout(function() {
-        resized();
-    }, 250);
-};
+console.log("working!")

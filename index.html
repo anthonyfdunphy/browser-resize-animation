@@ -4,12 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
-    <script src="/assets/javascript/script.js"></script>
+
     <title>Homepage</title>
 </head>
 <body>
-    <div id="resize-text">Resizing Window</div>
+
+    <nav class="navbar">
+        <span id="myname">Anthony Dunphy</span>
+        <span class="text-uppercase" id="menu">menu</span>
+    </nav>
+
+    <div data-scroll-container>
+        <section class="intro" data-scroll-section>
+            <p id="text-top" data-scroll>I’m a <strong>Berlin-based interactive developer</strong> working in the area of working on <strong>lighting, audio installation</strong> projects.</p>
+            <p id="text-bottom" data-scroll>TouchDesigner - Python, Django, HTML, CSS, Bootstrap</p>
+        </section>
+        <section class="projects" data-scroll-section>
+            <h2 data-scroll data-scroll-speed="1">TouchDesigner</h2>
+            <p data-scroll data-scroll-speed="2">😬</p>
+        </section>
+    </div>
+     
+    <script src="assets/javascript/locomotive-scroll.min.js"></script>
+    <script src="/assets/javascript/script.js"></script>
     
 </body>
 </html>

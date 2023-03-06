@@ -1,19 +1,77 @@
+@font-face {
+    font-family: harmondFont;
+    src: url(../fonts/Harmond-SemiBoldCondensed.otf);
+}
+
+@font-face {
+    font-family: number5;
+    src: url(../fonts/FogtwoNo5.otf);
+}
+
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    width: 100vw;
     height: 100vh;
-    background-color: aquamarine;
+    margin: 0;
+    background-color: #caff6e;
 }
 
-#resize-text{
-    visibility: hidden;
+.navbar{
+    outline: 1px solid red;
+    position: fixed;
     width: 100%;
-    height: 100%;
-    font-size: 5vw;
-    background-color: blueviolet;
+    height: 75px;
+    line-height: 40px;
+    font-size: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 1000;
 }
+
+/* Code for text transform on navbar*/
+#myname{
+    text-transform: lowercase;
+}
+
+#menu{
+    font-family: 'Inter', sans-serif;
+}
+
+section{
+    height: 100vh;
+    padding: 0;
+}
+
+/* Intro Section of the website */
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100dvh;
+}
+
+#text-top{
+    outline: 1px solid grey;
+    font-family: 'Inter', sans-serif;
+    line-height: 63px;
+    font-size: 60px;
+    max-width: 70%;
+}
+
+#text-bottom{
+    outline: 1px solid pink;
+    font-family: 'Inter', sans-serif;
+    line-height: 33px;
+    font-size: 30px;
+    max-width: 70%;
+}
+
+/* Project Section of the website */
+.projects{
+    background-color: pink;
+}
+
