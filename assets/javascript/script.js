@@ -35,10 +35,3 @@ scroll.on('scroll', function(scroll) {
     console.log(newValue);
   }
 });
-
-
-
-
-
-
-console.log("working!")

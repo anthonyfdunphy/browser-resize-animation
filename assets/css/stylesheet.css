@@ -15,14 +15,20 @@
     src: url(../fonts/FogtwoNo5.otf);
 }
 
+:root {
+    --bg: #caff6e;
+    /* #caff6e */
+}
+
 *{
     box-sizing: border-box;
+    overscroll-behavior-x: contain;
 }
 
 body{
     height: 100vh;
     margin: 0;
-    background-color: #caff6e;
+    background-color: var(--bg);
 }
 
 .navbar{
@@ -181,3 +187,12 @@ a{
     text-decoration: underline;
 }
 
+.contact-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%; /* Set the height of the navbar to full container height */
+    background-color: #f2f2f2;
+    transform: translateX(100%); /* Hide the navbar by default */
+    transition: transform 0.3s ease-in-out; /* Add a transition effect to the transform property */
+}
