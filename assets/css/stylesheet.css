@@ -49,6 +49,7 @@ body{
 #myname{
     font-family: 'Inter', sans-serif;
     text-transform: lowercase;
+    font-size: 28px;
     margin: 2%;
     color: #caff6e;
     -webkit-text-stroke: 0.5px black; /* width and color */
@@ -73,10 +74,12 @@ body{
 #text-top{
     margin-top: 15%;
     margin-left: 2%;
-    outline: 1px solid grey;
+    outline: 2px solid grey;
     line-height: 63px;
     font-size: 60px;
     max-width: 70%;
+    border-radius: 1px;
+    background-color: #bba0bb;
 }
 
 #text-bottom{
@@ -86,7 +89,6 @@ body{
     line-height: 53px;
     font-size: 40px;
     max-width: 70%;
-
 }
 
 [data-scroll-out="opacity"] {
@@ -102,13 +104,21 @@ body{
 .projects{
     background-color: #39512f;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     height: 100dvh;
     color: #f5f2eb;
     margin: 0;
     padding: 0;
+}
+
+.contact-bar {
+    height: 100%;
+    width: 5%;
+    background-color: #bba0bb;
+    border: 3px solid #d6bed6;
+    cursor: pointer;
 }
 
 .work-heading{
@@ -118,11 +128,24 @@ body{
     justify-content: center;
 }
 
+.work-content{
+    width: 75%;
+}
+
+.work-titles{
+    display: flex;
+    justify-content: space-around;
+}
+
 .touch, .py{
+    padding: 0;
     font-family: gallientFont;
     font-size: 3rem;
-    margin-left: auto;
     cursor: pointer;
+}
+
+.work{
+    width: 100%;
 }
 
 .proj-menu{
@@ -132,7 +155,9 @@ body{
     padding-bottom: 0;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
-    color: #bba0bb;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #d1b5d1;
     font-size: 3rem;
     margin-left: auto;
     cursor: pointer;
@@ -141,9 +166,7 @@ body{
 ul{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    width: 75%;
+    width: 100%;
     height: 75%;
     margin: 0;
     padding: 0;
@@ -154,7 +177,7 @@ li{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     border-top: solid;
 }
 
@@ -167,6 +190,7 @@ a{
     font-family: 'Inter', sans-serif;
     line-height: 1.5em;
     font-size: 1.5em;
+    margin-left: 5%;
 }
 
 .small-body{
@@ -174,25 +198,19 @@ a{
     line-height: 1.5em;
     font-size: 1.5em;
     font-weight: 200;
+    position: absolute;
+    transform: translateX(450px);
 }
 
 .link{
-    font-family: gallientFont;
     line-height: 1.5em;
     font-size: 1.5em;
+    margin-right: 5%;
     cursor: pointer;
+    margin-left: auto;
 }
 
 .selected-project{
     text-decoration: underline;
 }
 
-.contact-bar {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%; /* Set the height of the navbar to full container height */
-    background-color: #f2f2f2;
-    transform: translateX(100%); /* Hide the navbar by default */
-    transition: transform 0.3s ease-in-out; /* Add a transition effect to the transform property */
-}
