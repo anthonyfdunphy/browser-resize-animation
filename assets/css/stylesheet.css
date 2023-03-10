@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
+
+@font-face {
+    font-family: gallientFont;
+    src: url("/assets/fonts/GallientDemoVersion-Regular\ 400.otf");
+}
+
 @font-face {
     font-family: harmondFont;
     src: url(../fonts/Harmond-SemiBoldCondensed.otf);
@@ -29,7 +36,7 @@ body{
     align-items: center;
     justify-content: space-between;
     background-color: #e5f4cd;
-    z-index: 1000;
+    /* z-index: 1000; */
 }
 
 /* Code for text transform on navbar*/
@@ -48,13 +55,9 @@ body{
     -webkit-text-stroke: 0.5px black; /* width and color */
 }
 
-section{
-    height: 100vh;
-    padding: 0;
-}
-
 /* Intro Section of the website */
 .intro{
+    font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -65,7 +68,6 @@ section{
     margin-top: 15%;
     margin-left: 2%;
     outline: 1px solid grey;
-    font-family: 'Inter', sans-serif;
     line-height: 63px;
     font-size: 60px;
     max-width: 70%;
@@ -75,7 +77,6 @@ section{
     padding: 0;
     margin-top: 0;
     margin-left: 2%;
-    font-family: 'Inter', sans-serif;
     line-height: 53px;
     font-size: 40px;
     max-width: 70%;
@@ -93,22 +94,53 @@ section{
 
 /* Project Section of the website */
 .projects{
-    background-color: rgb(238, 192, 255);
+    background-color: #39512f;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100dvh;
+    color: #f5f2eb;
+    margin: 0;
+    padding: 0;
+}
+
+.work-heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.touch, .py{
+    font-family: gallientFont;
+    font-size: 3rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.proj-menu{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    color: #bba0bb;
+    font-size: 3rem;
+    margin-left: auto;
+    cursor: pointer;
 }
 
 ul{
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 75%;
     height: 75%;
+    margin: 0;
+    padding: 0;
 }
 
 li{
@@ -117,6 +149,7 @@ li{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    border-top: solid;
 }
 
 a{
@@ -134,11 +167,17 @@ a{
     font-family: 'Inter', sans-serif;
     line-height: 1.5em;
     font-size: 1.5em;
+    font-weight: 200;
 }
 
 .link{
-    font-family: 'Inter', sans-serif;
+    font-family: gallientFont;
     line-height: 1.5em;
     font-size: 1.5em;
+    cursor: pointer;
+}
+
+.selected-project{
+    text-decoration: underline;
 }
 
