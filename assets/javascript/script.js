@@ -35,3 +35,25 @@ scroll.on('scroll', function(scroll) {
     console.log(newValue);
   }
 });
+
+// JavaScript code
+const linkElement = document.querySelector('.link');
+const ulElement = document.querySelector('.work');
+const liElements = document.querySelectorAll('.work li');
+const inDetail = document.querySelector('.in-detail');
+const exitDetail = document.querySelector('.exit');
+
+linkElement.addEventListener('click', function() {
+  liElements.forEach(function(liElement) {
+    liElement.style.height = '0px'; // Change the value as needed
+  });
+
+  ulElement.style.opacity = '0'; // Set the opacity of the ul element to 0
+  ulElement.addEventListener('transitionend', function() {
+    inDetail.classList.remove('hidden');
+    ulElement.classList.add('hidden'); // Add the 'hidden' class to the ul element when the CSS transition ends
+  }, { once: true }); // Use the 'once' option to remove the event listener after it has fired
+});
+
+
+

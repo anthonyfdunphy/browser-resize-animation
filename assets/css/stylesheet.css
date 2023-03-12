@@ -36,8 +36,8 @@ body{
     position: fixed;
     width: 100%;
     height: 75px;
-    line-height: 40px;
-    font-size: 38px;
+    line-height: 4vw;
+    font-size: 4vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,8 +75,8 @@ body{
     margin-top: 15%;
     margin-left: 2%;
     outline: 2px solid grey;
-    line-height: 63px;
-    font-size: 60px;
+    line-height: 5vw;
+    font-size: 5vw;
     max-width: 70%;
     border-radius: 1px;
     background-color: #bba0bb;
@@ -86,8 +86,8 @@ body{
     padding: 0;
     margin-top: 0;
     margin-left: 2%;
-    line-height: 53px;
-    font-size: 40px;
+    line-height: 2.5vw;
+    font-size: 2.5vw;
     max-width: 70%;
 }
 
@@ -105,7 +105,6 @@ body{
     background-color: #39512f;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
     height: 100dvh;
     color: #f5f2eb;
@@ -122,14 +121,16 @@ body{
 }
 
 .work-heading{
+    margin-top: 100px;
     width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
 .work-content{
     width: 75%;
+    height: 350px;
 }
 
 .work-titles{
@@ -140,7 +141,7 @@ body{
 .touch, .py{
     padding: 0;
     font-family: gallientFont;
-    font-size: 3rem;
+    font-size: 4vw;
     cursor: pointer;
 }
 
@@ -158,7 +159,7 @@ body{
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color: #d1b5d1;
-    font-size: 3rem;
+    font-size: 4vw;
     margin-left: auto;
     cursor: pointer;
 }
@@ -170,15 +171,24 @@ ul{
     height: 75%;
     margin: 0;
     padding: 0;
+    opacity: 1;
+    transition: opacity 1.5s cubic-bezier(1,.02,.56,1.01); /* Add a CSS transition with a custom timing function */
+}
+
+.work.hidden {
+    opacity: 0; /* Set the opacity of the ul element to 0 when it is hidden */
+    display: none; /* Hide the ul element */
 }
 
 li{
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 90%);
     width: 100%;
+    height: 80px;
     display: flex;
     flex-direction: row;
     /* justify-content: space-evenly; */
     border-top: solid;
+    transition: height 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Add a CSS transition with a custom timing function */
 }
 
 a{
@@ -214,3 +224,132 @@ a{
     text-decoration: underline;
 }
 
+.in-detail{
+    background-color: #f5f2eb;
+    color: #39512f;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Add a CSS transition with a custom timing function */
+}
+
+.in-detail.hidden {
+    opacity: 0; /* Set the opacity of the ul element to 0 when it is hidden */
+    display: none; /* Hide the ul element */
+}
+
+.exit{
+    font-family: gallientFont;
+    font-size: 4vw;
+    cursor: pointer;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .small-body{
+        opacity: 0;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .small-body{
+        opacity: 0;
+    }
+
+    #text-top{
+        margin-top: 25%;
+        line-height: 7.5vw;
+        font-size: 7.5vw;
+        max-width: 85%;
+    }
+
+    #text-bottom{
+        line-height: 6vw;
+        font-size: 6vw;
+        max-width: 80%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .small-body{
+        opacity: 0;
+    }
+
+    #text-top{
+        margin-top: 15%;
+        margin-left: 2%;
+        outline: 2px solid grey;
+        line-height: 5vw;
+        font-size: 5vw;
+        max-width: 70%;
+        border-radius: 1px;
+        background-color: #bba0bb;
+    }
+    
+    #text-bottom{
+        padding: 0;
+        margin-top: 0;
+        margin-left: 2%;
+        line-height: 2.5vw;
+        font-size: 2.5vw;
+        max-width: 70%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .small-body{
+        opacity: 0;
+    }
+
+    #text-top{
+        margin-top: 15%;
+        margin-left: 2%;
+        outline: 2px solid grey;
+        line-height: 5vw;
+        font-size: 5vw;
+        max-width: 70%;
+        border-radius: 1px;
+        background-color: #bba0bb;
+    }
+    
+    #text-bottom{
+        padding: 0;
+        margin-top: 0;
+        margin-left: 2%;
+        line-height: 2.5vw;
+        font-size: 2.5vw;
+        max-width: 70%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .small-body{
+        opacity: 0;
+    }
+
+    #text-top{
+        margin-top: 15%;
+        margin-left: 2%;
+        outline: 2px solid grey;
+        line-height: 5vw;
+        font-size: 5vw;
+        max-width: 70%;
+        border-radius: 1px;
+        background-color: #bba0bb;
+    }
+    
+    #text-bottom{
+        padding: 0;
+        margin-top: 0;
+        margin-left: 2%;
+        line-height: 2.5vw;
+        font-size: 2.5vw;
+        max-width: 70%;
+    }
+}
