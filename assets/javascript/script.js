@@ -42,7 +42,6 @@ const ulElement = document.querySelector('.work');
 const liElements = document.querySelectorAll('.work li');
 const inDetail = document.querySelector('.in-detail');
 const exitDetail = document.querySelector('.exit');
-const textDetail = document.querySelector('.by-line');
 
 // this event listener checks when the + symbol is clicked and runs scripts
 
@@ -58,8 +57,7 @@ linkElement.addEventListener('click', function() {
     function setHeight() {
       inDetail.style.height = "100%";
       inDetail.style.opacity = "100%";
-      textDetail.style.opacity = "100%";
-      console.log("text fading!")
+      exitDetail.style.width = '5vw'
     };
 
     inDetail.classList.remove('hidden'); // Add the 'hidden' class from the detail div
@@ -75,6 +73,7 @@ linkElement.addEventListener('click', function() {
 exitDetail.addEventListener('click', function() {
   console.log("exit detail function working!");
   inDetail.style.height = "0%"; // Set height to 0 when closing
+  exitDetail.style.width = '0vw'
 
   inDetail.addEventListener('transitionend', function() {
     console.log("transition! exit detail function working!");

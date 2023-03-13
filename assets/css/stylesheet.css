@@ -244,11 +244,10 @@ a{
     right: 0; /* Position to the top-right corner */
     font-family: gallientFont;
     font-size: 6vw;
-    width: 5vw;
+    width: 0vw;
     cursor: pointer;
     background: none;
     background-color: #f5f2eb;
-    transition: width 1s ease-in-out;
 }
 
 .detail-pic{
