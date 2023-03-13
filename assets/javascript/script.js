@@ -42,6 +42,7 @@ const ulElement = document.querySelector('.work');
 const liElements = document.querySelectorAll('.work li');
 const inDetail = document.querySelector('.in-detail');
 const exitDetail = document.querySelector('.exit');
+const textDetail = document.querySelector('.by-line');
 
 // this event listener checks when the + symbol is clicked and runs scripts
 
@@ -57,6 +58,8 @@ linkElement.addEventListener('click', function() {
     function setHeight() {
       inDetail.style.height = "100%";
       inDetail.style.opacity = "100%";
+      textDetail.style.opacity = "100%";
+      console.log("text fading!")
     };
 
     inDetail.classList.remove('hidden'); // Add the 'hidden' class from the detail div

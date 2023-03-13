@@ -222,11 +222,15 @@ a{
 }
 
 .in-detail{
+    display: flex;
+    position: relative;
+    flex-direction: column;
     background-color: #f5f2eb;
     color: #39512f;
     width: 100%;
     height: 0%;
-    transition: height 1s ease-in-out; Add a CSS transition with a custom timing function
+    border: 1px solid #f5f2eb;
+    transition: height 1s ease-in-out; /* Add a CSS transition with a custom timing function */
 }
 
 .in-detail.hidden {
@@ -235,13 +239,43 @@ a{
 }
 
 .exit{
-    /* position: absolute; */
-    float:right;
-    margin-top: 2%;
-    margin-right: 2%;
+    position: absolute; /* Set position to absolute */
+    top: 0;
+    right: 0; /* Position to the top-right corner */
     font-family: gallientFont;
-    font-size: 4vw;
+    font-size: 6vw;
+    width: 5vw;
     cursor: pointer;
+    background: none;
+    background-color: #f5f2eb;
+    transition: width 1s ease-in-out;
+}
+
+.detail-pic{
+    flex: 2;
+    width: 100%;
+    background-image: url(/assets/img/spreehalle.jpeg);
+    background-position: center center;
+    transition: opacity 1s ease-in-out; /* Add a CSS transition with a custom timing function */
+}
+
+.by-line{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    height: 20%;
+    width: 100%;
+    background-color: #4d796e;
+}
+
+.title{
+    font-size: 6vw;
+    opacity: 0;
+    color: #f5f2eb;
+    transition: opacity 3s ease-in-out; /* Add a CSS transition with a custom timing function */
 }
 
 
